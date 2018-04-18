@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CutMutch</title>
+  <title>CatMatch</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header class="top_header">
+    <div class="top_header__wrap">
+      <h1><%= link_to 'Matching', '/tops' %></h1>
+      <nav>
+        <ul>
+          <li><%= link_to "美容師の方ログインor新規登録", class: 'post' %></li>
+          <li><%= link_to "施設の方ログインor新規登録", class: 'post' %></li>
+          <li><a href="">美容師一覧</a></li>
+          <li><a href="">施設一覧</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 <%= yield %>
-
 </body>
 </html>
